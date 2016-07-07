@@ -1,0 +1,26 @@
+.image-collage-bottom.bot-padding {
+    padding-bottom: 2%;
+}
+
+.image-collage-bottom:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.image-collage-bottom img {
+    display: block;
+    width: 100%;
+}
+
+.image-collage-bottom div {
+    width: 49%;
+    float: left;
+}
+
+.image-collage-bottom div.last {
+    margin-left: 2%;
+}

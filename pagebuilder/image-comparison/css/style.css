@@ -1,0 +1,119 @@
+.cocoen {
+    position: relative;
+    overflow: hidden;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.cocoen > img {
+    width: 100%;
+    display: block;
+}
+
+.cocoen img {
+    max-width: none !important;
+}
+
+.cocoen > div:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cocoen__drag {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    cursor: ew-resize;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    background: #fff;
+    margin-left: -1px;
+    -moz-background-clip: content;     /* Firefox 3.6 */
+    -webkit-background-clip: content;  /* Safari 4? Chrome 6? */
+    background-clip: content-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+
+.cocoen__drag::before,
+.cocoen__drag::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 1em;
+    width: 1em;
+    -webkit-transition: all 65ms ease-out;
+       -moz-transition: all 65ms ease-out;
+        -ms-transition: all 65ms ease-out;
+         -o-transition: all 65ms ease-out;
+            transition: all 65ms ease-out;
+    transform: rotate(-45deg);
+}
+
+.cocoen__drag:before {
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    margin-left: -1.2em;
+    margin-top: -0.5em;
+}
+
+.cocoen__drag:after {
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    margin-top: -0.5em;
+
+}
+
+.cocoen__drag:hover::before {
+    margin-left: -1.4em;
+}
+
+.cocoen__drag:hover::after {
+    margin-left: 0.2em;
+}
+
+.cocoen__drag.dragging::before {
+    margin-left: -0.9em;
+}
+
+.cocoen__drag.dragging::after {
+    margin-left: -0.3em;
+}
+
+.cocoen .left-label,
+.cocoen .right-label {
+    display: block;
+    font-size: 0.8em;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0.5em;
+    line-height: 1.3em;
+    padding: 0.2em 0.6em;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.cocoen .left-label {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+}
+
+.cocoen .right-label {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}

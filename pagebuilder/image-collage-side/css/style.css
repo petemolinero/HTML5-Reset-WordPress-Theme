@@ -1,0 +1,30 @@
+.image-collage-side.bot-padding {
+    padding-bottom: 2%;
+}
+
+.image-collage-side:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.image-collage-side img {
+    display: block;
+    width: 100%;
+}
+
+.image-collage-side .full {
+    width: 66.375%;
+    float: left;
+    margin-right: 2%;
+}
+
+.image-collage-side .side {
+    width: 31.625%;
+    float: right;
+    margin: 0px 0px 2%;
+    padding: 0px;
+}

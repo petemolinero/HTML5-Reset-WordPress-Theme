@@ -1,0 +1,121 @@
+// Default settings
+// These are often overridden in site-specific stylesheets
+
+// We can use this mixin to help convert ems
+@function em($px, $base: $base-font-size) {
+  @return $px / $base * 1em;
+}
+
+// We can use these mixins to wrap any styles that we'd like
+// to be phone, tablet, or desktop only
+@mixin display-above($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+// We can use these mixins to wrap any styles that we'd like
+// to be phone, tablet, or desktop only
+@mixin display-above-y($size) {
+  @media only screen and (min-height: $size) {
+    @content;
+  }
+}
+
+// We can use these mixins to wrap any styles that we'd like
+// to be phone, tablet, or desktop only
+@mixin display-above-both($size) {
+    @media  screen and  (min-height: $size)  {
+       @media  screen and  (min-width: $size)  {
+         @content;
+       }
+    }
+}
+
+%clearfix {
+  *zoom: 1;
+
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
+// For those times when we need to tweak a layout
+// in a single location.
+$sizes: (none 0, sm em(8px), md em(18px), lg em(28px), xlg em(40px), xxlg em(72px));
+$sides: top, right, bottom, left;
+
+@each $side in $sides {
+
+    @each $size in $sizes {
+
+        $title: nth($size, 1);
+        $px: nth($size, 2);
+
+        .padding-#{$side}-#{$title} {
+            padding-#{$side}: $px !important;
+        }
+
+        .margin-#{$side}-#{$title} {
+            margin-#{$side}: $px !important;
+        }
+
+        .padding-#{$side}-#{$title}-desktop {
+            @include display-above( $mobile-md-size ) {
+                padding-#{$side}: $px !important;
+            }
+        }
+
+        .padding-#{$side}-#{$title}-mobile {
+            padding-#{$side}: $px !important;
+
+            @include display-above( $mobile-md-size ) {
+                padding-#{$side}: 0 !important;
+            }
+        }
+
+        .margin-#{$side}-#{$title}-desktop {
+            @include display-above( $mobile-md-size ) {
+                margin-#{$side}: $px !important;
+            }
+        }
+
+        .margin-#{$side}-#{$title}-mobile {
+            margin-#{$side}: $px !important;
+
+            @include display-above( $mobile-md-size ) {
+                margin-#{$side}: 0 !important;
+            }
+        }
+
+    }
+}
+
+// Because the site will be scaling up and down, we need to make
+// sure that images never exceed the size of their container
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.mobile-only {
+    display: block;
+
+    @include display-above( $mobile-md-size ) {
+        display: none;
+    }
+}
+
+.desktop-only {
+    display: none;
+
+    @include display-above( $mobile-md-size ) {
+        display: block;
+    }
+}

@@ -1,0 +1,34 @@
+.blog {}
+
+.blog .title {
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.blog .title a {
+    text-decoration: none;
+}
+
+.blog .featured-img {
+    display: block;
+    margin-bottom: 0.25em;
+}
+
+.blog .featured-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.blog .meta {
+    margin-bottom: 1em;
+}
+
+.blog .excerpt {
+    margin-bottom: 2em;
+}
+
+.blog .loop {
+    border-bottom: 1px solid #e1e2d0;
+    margin-bottom: 2em;
+}

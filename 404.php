@@ -1,13 +1,18 @@
 <?php
 /**
  * @package WordPress
- * @subpackage HTML5-Reset-WordPress-Theme
- * @since HTML5 Reset 2.0
+ * @subpackage Unshackled-Theme
+ * @since 1.0
  */
- get_header(); ?>
 
-	<h2><?php _e('Error 404 - Page Not Found','html5reset'); ?></h2>
+get_header(); ?>
 
-<?php get_sidebar(); ?>
+<div class="error-404">
+    <h1>Page Not Found</h1>
+    <p>Oops! The page you were trying to view could not be found. This could be due to an outdated link, a mistyped URL, or a site error.</p>
+    <p class="margin-top-md">
+        <a href="<?php echo site_url(); ?>">Back to Home</a>
+    </p>
+</div>
 
 <?php get_footer(); ?>

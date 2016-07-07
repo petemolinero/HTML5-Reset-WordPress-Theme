@@ -1,0 +1,34 @@
+.title-area {
+    margin-bottom: 1.5em;
+}
+
+@media only screen and (min-width: 768px) {
+    .title-area {
+        display: table;
+    }
+
+    .title-area__title,
+    .title-area__description {
+        display: table-cell;
+    }
+
+    .title-area__description {
+        font-size: 20px;
+        padding-top: 0.5em;
+    }
+
+    .title-area__description p {
+        margin-bottom: 0;
+    }
+
+    .title-area__title {
+        vertical-align: middle;
+        width: 1px;
+        white-space: nowrap;
+    }
+
+    .title-area__description {
+        padding-left: 2em;
+        vertical-align: middle;
+    }
+}

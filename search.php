@@ -1,14 +1,14 @@
 <?php
 /**
  * @package WordPress
- * @subpackage HTML5-Reset-WordPress-Theme
- * @since HTML5 Reset 2.0
+ * @subpackage Unshackled-Theme
+ * @since 1.0
  */
  get_header(); ?>
 
 	<?php if (have_posts()) : ?>
 
-		<h2><?php _e('Search Results','html5reset'); ?></h2>
+		<h2><?php _e('Search Results','unshackled'); ?></h2>
 
 		<?php post_navigation(); ?>
 
@@ -34,7 +34,7 @@
 
 	<?php else : ?>
 
-		<h2><?php _e('Nothing Found','html5reset'); ?></h2>
+		<h2><?php _e('Nothing Found','unshackled'); ?></h2>
 
 	<?php endif; ?>
 

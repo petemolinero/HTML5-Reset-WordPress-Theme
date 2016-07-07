@@ -1,0 +1,17 @@
+.image-single.bot-padding {
+    padding-bottom: 2%;
+}
+
+.image-single:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.image-single img {
+    display: block;
+    width: 100%;
+}

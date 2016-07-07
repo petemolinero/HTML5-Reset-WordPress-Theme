@@ -1,0 +1,41 @@
+$mobile-xsm-size: 380px;
+$mobile-sm-size: 480px;
+$mobile-md-size: 768px;
+$mobile-lg-size: 1024px;
+$base-font-size: 16px;
+
+$color: #891345;
+$light-color: lighten($color, 5%);
+$accent: #aaad95;
+$light-accent: #cbcdbc;
+$dark-accent: #848770;
+$dark-color: #570b2b;
+$secondary-color: #868f2c;
+$dark-secondary-color: #554f1f;
+$header-color: $color;
+$white: #f6f7ef;
+$font-color: #333333;
+
+$primary-font: 'Source Sans Pro', sans-serif;
+$secondary-font: 'Alice', serif;
+
+@import 'partials/normalize';
+@import 'partials/helpers';
+@import 'partials/typography';
+@import 'partials/grid';
+@import 'partials/layout';
+@import 'partials/icons';
+@import 'partials/mobileMenu';
+@import 'partials/wpsms';
+@import 'partials/tinySlider';
+@import 'partials/products';
+@import 'partials/ohSnap';
+@import 'partials/blog';
+@import 'partials/woocommerce';
+@import 'partials/contactForm';
+@import 'partials/customOrderForm';
+@import 'partials/mfp';
+@import 'partials/tables';
+@import 'partials/forms';
+@import 'partials/tipso';
+@import 'partials/users';

@@ -1,0 +1,42 @@
+.recipe {
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #e1e2d0;
+    margin-bottom: 1.5em;
+}
+
+.recipe__title {
+    margin-top: 0;
+}
+
+.recipe__title small {
+    position: relative;
+    top: -1px;
+    margin-left: 0.5em;
+}
+
+.recipe__title small:hover {
+}
+
+.recipe ul {
+    margin: 0;
+    padding-left: 1.2em;
+}
+
+.recipe li {
+    padding: 0.15em 0;
+}
+
+@page {
+    size: portrait;
+    margin: 1in;
+}
+
+@media print {
+    body {
+        font-size: 14px;
+    }
+
+    * {
+        background: white !important;
+    }
+}
